@@ -8,7 +8,7 @@ drop table singer_genre CASCADE;
 drop table track CASCADE;
 drop table track_collection CASCADE;
 
--- create запросы 
+-- create Р·Р°РїСЂРѕСЃС‹ 
 
 create table if not exists genre (
 	id serial primary key,
@@ -64,7 +64,7 @@ create table if not exists track_collection (
 );
 
 
--- insert запросы 
+-- insert Р·Р°РїСЂРѕСЃС‹ 
 
 
 INSERT INTO genre (id, genre_name) VALUES
@@ -75,14 +75,14 @@ INSERT INTO genre (id, genre_name) VALUES
 	(5, 'Pop');
 
 INSERT INTO singer (id, full_name, nickname) VALUES
-	(1, 'Алексей Узенюк', 'allJ'),
-	(2, 'Егор Булаткин', 'Egor Krid'),
-	(3, 'Артем Готлиб', 'Slawa Marlow'),
-	(4, 'Екатерина Иванчикова', 'Iowa'),
-	(5, 'Роман Билык', 'Рома зверь'),
-	(6, 'Федор Инсаров', 'Feduk'),
-	(7, 'Данил Прытков', 'Niletto'),
-	(8, 'Александр Ревва', 'Артур Пирожков');
+	(1, 'РђР»РµРєСЃРµР№ РЈР·РµРЅСЋРє', 'allJ'),
+	(2, 'Р•РіРѕСЂ Р‘СѓР»Р°С‚РєРёРЅ', 'Egor Krid'),
+	(3, 'РђСЂС‚РµРј Р“РѕС‚Р»РёР±', 'Slawa Marlow'),
+	(4, 'Р•РєР°С‚РµСЂРёРЅР° РРІР°РЅС‡РёРєРѕРІР°', 'Iowa'),
+	(5, 'Р РѕРјР°РЅ Р‘РёР»С‹Рє', 'Р РѕРјР° Р·РІРµСЂСЊ'),
+	(6, 'Р¤РµРґРѕСЂ РРЅСЃР°СЂРѕРІ', 'Feduk'),
+	(7, 'Р”Р°РЅРёР» РџСЂС‹С‚РєРѕРІ', 'Niletto'),
+	(8, 'РђР»РµРєСЃР°РЅРґСЂ Р РµРІРІР°', 'РђСЂС‚СѓСЂ РџРёСЂРѕР¶РєРѕРІ');
 
 INSERT INTO singer_genre (singer_id, genre_id) VALUES
 	(1,1),
@@ -102,13 +102,13 @@ INSERT INTO singer_genre (singer_id, genre_id) VALUES
 INSERT INTO album (id, album_name, release_year) VALUES
 	(1, 'More Love', 2018),
 	(2, 'Sayonara boy 143', 2018),
-	(3, 'Артем', 2020),
-	(4, 'Холосятк', 2015),
+	(3, 'РђСЂС‚РµРј', 2020),
+	(4, 'РҐРѕР»РѕСЃСЏС‚Рє', 2015),
 	(5, 'Export', 2014),
-	(6, 'Ляля', 2018),
-	(7, 'Хентай', 2018),
-	(8, 'Районы Кварталы', 2006),
-	(9, 'Все о любви', 2020);
+	(6, 'Р›СЏР»СЏ', 2018),
+	(7, 'РҐРµРЅС‚Р°Р№', 2018),
+	(8, 'Р Р°Р№РѕРЅС‹ РљРІР°СЂС‚Р°Р»С‹', 2006),
+	(9, 'Р’СЃРµ Рѕ Р»СЋР±РІРё', 2020);
 
 INSERT INTO album_singer (singer_id, album_id) VALUES
 	(6, 1),
@@ -124,20 +124,20 @@ INSERT INTO album_singer (singer_id, album_id) VALUES
 	(8, 9);
 
 INSERT INTO track (id, track_name, duration, album_id) VALUES
-	(1, 'Розовое вино', 241, 1),
-	(2, 'Море', 147, 1),
-	(3, 'Мой - 143', 191, 2),
-	(4, 'Снова', 241, 3),
-	(5, 'Только мой', 337, 4),
-	(6, 'Улыбайся', 299, 5),
-	(7, 'Под крылом', 241, 6),
-	(8, 'Сентиенты', 233, 7),
-	(9, 'Мой квартал', 201, 8),
-	(10, 'Фит с зиверт', 241, 7),
-	(11, 'Кипарис', 241, 6),
-	(12, 'Москит', 241, 5),
-	(13, 'Борода', 241, 4),
-	(14, 'Камри 3,5', 241, 3),
+	(1, 'Р РѕР·РѕРІРѕРµ РІРёРЅРѕ', 241, 1),
+	(2, 'РњРѕСЂРµ', 147, 1),
+	(3, 'РњРѕР№ - 143', 191, 2),
+	(4, 'РЎРЅРѕРІР°', 241, 3),
+	(5, 'РўРѕР»СЊРєРѕ РјРѕР№', 337, 4),
+	(6, 'РЈР»С‹Р±Р°Р№СЃСЏ', 299, 5),
+	(7, 'РџРѕРґ РєСЂС‹Р»РѕРј', 241, 6),
+	(8, 'РЎРµРЅС‚РёРµРЅС‚С‹', 233, 7),
+	(9, 'РњРѕР№ РєРІР°СЂС‚Р°Р»', 201, 8),
+	(10, 'Р¤РёС‚ СЃ Р·РёРІРµСЂС‚', 241, 7),
+	(11, 'РљРёРїР°СЂРёСЃ', 241, 6),
+	(12, 'РњРѕСЃРєРёС‚', 241, 5),
+	(13, 'Р‘РѕСЂРѕРґР°', 241, 4),
+	(14, 'РљР°РјСЂРё 3,5', 241, 3),
 	(15, '1-love', 241, 2);
 
 INSERT INTO collection (id, collection_name, release_year) VALUES
@@ -162,11 +162,11 @@ INSERT INTO track_collection (track_id, collection_id) VALUES
 	(13, 7),
 	(6, 8);
 
--- Select запросы 
+-- Select Р·Р°РїСЂРѕСЃС‹ 
 
 SELECT album_name, release_year FROM album WHERE release_year = 2018;
 SELECT track_name, duration FROM track order by duration desc LIMIT 1;
 SELECT track_name FROM track WHERE duration >= 3.5*60;
 SELECT collection_name FROM collection WHERE release_year BETWEEN 2018 and 2020;
 SELECT full_name, nickname FROM singer WHERE nickname not like '% %'; 
-SELECT track_name FROM track WHERE track_name ilike '%мой%'; 
+SELECT track_name FROM track WHERE track_name ilike '%РјРѕР№%'; 
